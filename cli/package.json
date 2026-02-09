@@ -1,0 +1,13 @@
+{
+  "name": "pgdb-cli",
+  "version": "0.1.0",
+  "description": "pgdb CLI",
+  "type": "module",
+  "bin": {
+    "pgdb": "./bin/pgdb.ts"
+  },
+  "scripts": {
+    "start": "bun ./bin/pgdb.ts",
+    "test": "bun test"
+  }
+}

@@ -1,0 +1,16 @@
+[Unit]
+Description=pgdb daemon
+After=network-online.target docker.service
+Wants=network-online.target
+Requires=docker.service
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/pgdbd.env
+ExecStart=/usr/local/bin/pgdbd
+Restart=always
+RestartSec=2
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
