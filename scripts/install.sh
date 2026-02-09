@@ -28,7 +28,7 @@ if ! command -v go >/dev/null 2>&1; then
 fi
 
 echo "Building pgdbd..."
-(cd "${ROOT_DIR}" && go build -o /usr/local/bin/pgdbd ./daemon/cmd/pgdbd)
+(cd "${ROOT_DIR}/daemon" && go build -o /usr/local/bin/pgdbd ./cmd/pgdbd)
 chmod +x /usr/local/bin/pgdbd
 
 echo "Preparing directories..."
